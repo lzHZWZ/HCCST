@@ -2,13 +2,11 @@ import pickle
 import sys
 import torch
 import numpy as np
-from network import HashModel, CenterModel, AlexNetFc
-from thop import profile
+from network import HashModel, CenterModel
 
 from common import utils
 from common.logger import Logger
 
-from common.sendEmail import sendEmail
 from evaluate.measure_utils import get_precision_recall_by_Hamming_Radius_optimized, mean_average_precision
 import options
 

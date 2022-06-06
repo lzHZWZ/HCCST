@@ -12,10 +12,9 @@ from tqdm import tqdm
 from Loss import Loss, HashCenterLoss
 from common import utils
 from common.logger import Logger
-from common.plot import Draw
 from dataloader.DataSet_loader import getDataLoader
 from evaluate.measure_utils import *
-from network import HashModel, CenterModel, AlexNetFc, Swin4Hash, DualCNN_GNNCenterModel
+from network import HashModel, CenterModel,Swin4Hash
 import options
 from config import get_config
 from backbone import build_model
@@ -149,8 +148,6 @@ class Engine(object):
                 self.state['final_result'][0][2],
                 self.state['final_result'][0][1], self.state['final_result'][0][0]
             ))
-        Draw(state)
-        pass
 
     def updateCenter(self, criterion_center, word_embedding, weightCenter, hashCenter_pre, optimizer):
         optimizer.zero_grad()

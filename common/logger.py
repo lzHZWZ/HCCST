@@ -21,9 +21,3 @@ class Logger:
         timeStr = time.strftime("[%m%d-%H:%M:%S]")
         return timeStr
 
-
-if __name__ == '__main__':
-    a = numpy.arange(1, 10, 1)
-    Logger.info("test {}".format(a))
-    time = datetime.datetime.now()
-    print(Logger.getTimeStr(time))

@@ -19,8 +19,8 @@ def adj2tensor(adj_file):
 def get_dytxt(tfile):
 	data = []
 	try:
-		with open(str(tfile), "r") as f:  # 打开文件
-			content = f.readlines()  # 读取文件
+		with open(str(tfile), "r") as f:
+			content = f.readlines()
 			for item in content:
 				data.append(float(item))
 			print("the data list in the .txt is:", data)
