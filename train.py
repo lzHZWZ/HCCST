@@ -154,6 +154,7 @@ class Engine(object):
         Logger.info("\t<==update center==>")
         loss = criterion_center(word_embedding, hashCenter_pre,
                                 weightCenter, utils.getTrainbaseHashPoolPath(self.option, self.state))
+	Logger.info('adapter loss:{}'.format(loss.item()))
         loss.backward()
         optimizer.step()
 
